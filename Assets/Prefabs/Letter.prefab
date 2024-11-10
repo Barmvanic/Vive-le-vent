@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 35.35, y: 16.8, z: 2.4499998}
-  m_LocalScale: {x: 6.0390763, y: 0.09274093, z: 9.438933}
+  m_LocalScale: {x: 0.25435925, y: 0.0039061455, z: 0.39755744}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6142589014294522328}
@@ -165,8 +165,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.96576536, b: 0.8207547, a: 1}
-  m_Intensity: 1
-  m_Range: 13
+  m_Intensity: 0.75
+  m_Range: 0.9182911
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
