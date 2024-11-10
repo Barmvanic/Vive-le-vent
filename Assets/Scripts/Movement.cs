@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    GameManager gameManager;
+
     [SerializeField] private float moveSpeed = 1f;
     private float StartMoveSpeed;
 
@@ -19,6 +21,8 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
         StartTime = CurrentTime;
         StartMoveSpeed = moveSpeed;
     }
@@ -26,10 +30,11 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        rotate();
-
-        moveForward();
+       if (gameManager.ShowLetter == false)
+        {
+            rotate();
+            moveForward();
+        }
         
     }
 
@@ -46,7 +51,7 @@ public class Movement : MonoBehaviour
 
         transform.Rotate(-yAngle * rotateSpeed, xAngle * rotateSpeed * 1.5f, 0f, Space.Self);
 
-        Debug.Log(xAngle + "____" + yAngle);
+        // Debug.Log(xAngle + "____" + yAngle);
     }
 
     void moveForward()
