@@ -39,12 +39,14 @@ public class Letter : MonoBehaviour
         {    
             LetterUImage.texture = LetterImage;
             Reading();
+            Destroy(this.gameObject);
         }
     }
 
 
     public void Reading()
     {
+        gameManager.LettersCollected++;
         gameManager.ShowLetter = true;
         LetterUI.SetActive(true);
     }
