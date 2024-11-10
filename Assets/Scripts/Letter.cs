@@ -30,7 +30,7 @@ public class Letter : MonoBehaviour
         
     }
 
-    void onTriggerEnter(Collider col)
+    void OnTriggerEnter(Collider col)
     {
 
         Debug.Log("Letter should be reading");
