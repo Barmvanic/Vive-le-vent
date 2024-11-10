@@ -6,7 +6,9 @@ public class Movement : MonoBehaviour
 {
     GameManager gameManager;
 
-    [SerializeField] private float moveSpeed = 1f;
+    public bool fast;
+    public float fastSpeed = 10f;
+    public float moveSpeed = 1f;
     private float StartMoveSpeed;
 
     [SerializeField] private float rotateSpeed = 2f;
@@ -25,6 +27,8 @@ public class Movement : MonoBehaviour
 
         StartTime = CurrentTime;
         StartMoveSpeed = moveSpeed;
+
+        fast = false;
     }
 
     // Update is called once per frame
@@ -36,9 +40,10 @@ public class Movement : MonoBehaviour
             moveForward();
         }
         
+        Debug.Log(moveSpeed);
     }
 
-    
+
     void rotate()
     {
         Vector3 mousePos = Input.mousePosition;
@@ -51,7 +56,6 @@ public class Movement : MonoBehaviour
 
         transform.Rotate(-yAngle * rotateSpeed, xAngle * rotateSpeed * 1.5f, 0f, Space.Self);
 
-        // Debug.Log(xAngle + "____" + yAngle);
     }
 
     void moveForward()
@@ -62,7 +66,10 @@ public class Movement : MonoBehaviour
         if ((yAngle - exYAngle > 0.01f) && (xAngle - exXAngle > 0.015f))
         {
             CurrentTime = StartTime;
-            moveSpeed = StartMoveSpeed;
+            if (!fast)
+                moveSpeed = StartMoveSpeed;
+            else
+                moveSpeed = StartMoveSpeed + fastSpeed;
 
         }
         else
@@ -73,7 +80,10 @@ public class Movement : MonoBehaviour
             if (CurrentTime <= 0)
             {
                 CurrentTime = 0;
-                moveSpeed = StartMoveSpeed + (StartMoveSpeed * StartTime);
+                if (!fast)
+                    moveSpeed = StartMoveSpeed + (StartMoveSpeed * StartTime);
+                else
+                    moveSpeed = StartMoveSpeed + (StartMoveSpeed * StartTime) + fastSpeed;
             } 
         }
 

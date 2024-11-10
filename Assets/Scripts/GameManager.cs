@@ -42,7 +42,10 @@ public class GameManager : MonoBehaviour
             // End game
             if (LettersCollected == LettersNeeded)
             {
-                SceneManager.LoadScene("End_SCN");
+                if (SceneManager.GetActiveScene().buildIndex != (Application.levelCount - 1))
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                else
+                    SceneManager.LoadScene("Main_SCN");
             }
         }
     }
