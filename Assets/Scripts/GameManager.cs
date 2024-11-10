@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class GameManager : MonoBehaviour
         {
             CloseLetter();
         }
+
+        
     }
 
     void CloseLetter()
@@ -35,6 +38,12 @@ public class GameManager : MonoBehaviour
         {
             LetterUI.SetActive(false);
             ShowLetter = false;
+
+            // End game
+            if (LettersCollected == LettersNeeded)
+            {
+                SceneManager.LoadScene("End_SCN");
+            }
         }
     }
 }
