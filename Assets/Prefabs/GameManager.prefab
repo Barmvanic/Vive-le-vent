@@ -50,6 +50,7 @@ MonoBehaviour:
   LettersNeeded: 5
   LetterUI: {fileID: 0}
   UIText: {fileID: 0}
+  TimerText: {fileID: 0}
 --- !u!114 &6102805404435564173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,4 +63,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ff6206c4bd47034aa84a2814477e0ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentTime: 30
+  CurrentTime: 50

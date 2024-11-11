@@ -68,8 +68,8 @@ public class GameManager : MonoBehaviour
             // End game
             if (LettersCollected == LettersNeeded)
             {
-               
-                Timer.BestTime = timer.CurrentTime;
+                if (Timer.BestTime < timer.CurrentTime)
+                    Timer.BestTime = timer.CurrentTime;
 
                 if (SceneManager.GetActiveScene().buildIndex != (SceneManager.sceneCountInBuildSettings - 1))
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
