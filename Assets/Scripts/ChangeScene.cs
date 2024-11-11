@@ -23,7 +23,7 @@ public class MainScreen : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
            
-            if (SceneManager.GetActiveScene().buildIndex != (Application.levelCount - 1))
+            if (SceneManager.GetActiveScene().buildIndex != (SceneManager.sceneCountInBuildSettings - 1))
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             else
                 SceneManager.LoadScene("Main_SCN");
