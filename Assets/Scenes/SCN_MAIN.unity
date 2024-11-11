@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 43793317}
   m_Layer: 0
   m_Name: Cube (14)
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1225,6 +1225,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: camera_001
       objectReference: {fileID: 0}
+    - target: {fileID: 1554047866927877844, guid: 74ecb4ff10fc70546aa59fc2118a8502, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 2223308038859707502, guid: 74ecb4ff10fc70546aa59fc2118a8502, type: 3}
       propertyPath: m_LocalScale.x
       value: 91.64509
@@ -1770,6 +1774,10 @@ PrefabInstance:
     - target: {fileID: 2950561190879039325, guid: f55d7df03694fd244a9b29dcc29c2175, type: 3}
       propertyPath: m_Name
       value: closet_001 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2950561190879039325, guid: f55d7df03694fd244a9b29dcc29c2175, type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2335,6 +2343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_001
       objectReference: {fileID: 0}
+    - target: {fileID: 7826058823715770052, guid: 29da025a34eaa5d4eabe6fac544b245d, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -892668964993304798, guid: 29da025a34eaa5d4eabe6fac544b245d, type: 3}
     m_RemovedGameObjects: []
@@ -2815,6 +2827,10 @@ PrefabInstance:
     - target: {fileID: 8768485004339793628, guid: 23e60ffe52c59f64ab40ec6e6ce36781, type: 3}
       propertyPath: m_Name
       value: box_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768485004339793628, guid: 23e60ffe52c59f64ab40ec6e6ce36781, type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4286,6 +4302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: flower_001
       objectReference: {fileID: 0}
+    - target: {fileID: 6596774637294519909, guid: 625c63d1d4491964d8bdca1e8140e3c1, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4538,6 +4558,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: flower_001 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6596774637294519909, guid: 625c63d1d4491964d8bdca1e8140e3c1, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4698,8 +4722,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sofa_001
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -2312482197058670567, guid: c12cbdd8c7f58cc4e82747b66b152ca9, type: 3}
+    - target: {fileID: 8775740971403266423, guid: c12cbdd8c7f58cc4e82747b66b152ca9, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -5074,7 +5101,7 @@ GameObject:
   - component: {fileID: 1162580711}
   m_Layer: 0
   m_Name: Cube (15)
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5232,6 +5259,10 @@ PrefabInstance:
     - target: {fileID: 6596774637294519909, guid: 625c63d1d4491964d8bdca1e8140e3c1, type: 3}
       propertyPath: m_Name
       value: flower_001 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596774637294519909, guid: 625c63d1d4491964d8bdca1e8140e3c1, type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5998,8 +6029,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8775740971403266423, guid: c12cbdd8c7f58cc4e82747b66b152ca9, type: 3}
   m_PrefabInstance: {fileID: 1043709667}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1344391657
-BoxCollider:
+--- !u!64 &1344391657
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6016,9 +6047,10 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.9684838, y: 0.14647806, z: 0.94911885}
-  m_Center: {x: 0.0000002329393, y: 0.07323903, z: -0.043400783}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3789611326351540415, guid: b2bfb3f987d345b4388c7173f6f9649c, type: 3}
 --- !u!1 &1347082067
 GameObject:
   m_ObjectHideFlags: 0
@@ -6285,6 +6317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lounge_chair_001
       objectReference: {fileID: 0}
+    - target: {fileID: 4237530767371831047, guid: 4c4b2b0935db72a45a61b3a6e86d95bf, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6317,8 +6353,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.65769535, y: 0.9399943, z: 0.6995028}
-  m_Center: {x: -0.00045993907, y: 0.46638158, z: 0.007544578}
+  m_Size: {x: 0.77705836, y: 0.9399943, z: 0.8898083}
+  m_Center: {x: -0.060140777, y: 0.46638158, z: -0.08760702}
 --- !u!1 &1421351148
 GameObject:
   m_ObjectHideFlags: 0
@@ -6438,7 +6474,7 @@ GameObject:
   - component: {fileID: 1441713543}
   m_Layer: 0
   m_Name: Cube (13)
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7432,7 +7468,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!1 &1587938748
 GameObject:
   m_ObjectHideFlags: 0
@@ -7447,7 +7483,7 @@ GameObject:
   - component: {fileID: 1587938750}
   m_Layer: 0
   m_Name: Cube (12)
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8461,6 +8497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bed_001
       objectReference: {fileID: 0}
+    - target: {fileID: 3800496436466665405, guid: 82f624b1964c7ba4fb21eae95f185a9c, type: 3}
+      propertyPath: m_TagString
+      value: Environment
+      objectReference: {fileID: 0}
     - target: {fileID: 4520007325079333323, guid: 82f624b1964c7ba4fb21eae95f185a9c, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -8858,8 +8898,24 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1643108055426624944, guid: 25fe6fb8bf4c76245b01aec630fe1de0, type: 3}
+      propertyPath: m_Radius
+      value: 2.3095841
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643108055426624944, guid: 25fe6fb8bf4c76245b01aec630fe1de0, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643108055426624944, guid: 25fe6fb8bf4c76245b01aec630fe1de0, type: 3}
+      propertyPath: m_Center.x
+      value: 0.23462102
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643108055426624944, guid: 25fe6fb8bf4c76245b01aec630fe1de0, type: 3}
+      propertyPath: m_Center.y
+      value: -0.3271587
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643108055426624944, guid: 25fe6fb8bf4c76245b01aec630fe1de0, type: 3}
+      propertyPath: m_Center.z
+      value: -0.0000000030031293
       objectReference: {fileID: 0}
     - target: {fileID: 1643108055426624944, guid: 25fe6fb8bf4c76245b01aec630fe1de0, type: 3}
       propertyPath: m_ProvidesContacts
@@ -9060,6 +9116,10 @@ PrefabInstance:
     - target: {fileID: 4119154550041791677, guid: de5541a6f611e194dad2bc6ba668ed75, type: 3}
       propertyPath: m_Name
       value: clothes_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4119154550041791677, guid: de5541a6f611e194dad2bc6ba668ed75, type: 3}
+      propertyPath: m_TagString
+      value: Environment
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
