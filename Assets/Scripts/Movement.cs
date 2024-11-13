@@ -6,6 +6,11 @@ public class Movement : MonoBehaviour
 {
     GameManager gameManager;
 
+    private bool bump;
+    [SerializeField] private float knockbackForce = 10f;
+    private Vector3 moveWall;
+    // private Rigidbody rb;
+
     public bool fast;
     public float fastSpeed = 10f;
     public float moveSpeed = 1f;
@@ -24,6 +29,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        // rb = GetComponent<Rigidbody>();
 
         StartTime = CurrentTime;
         StartMoveSpeed = moveSpeed;
@@ -37,7 +43,10 @@ public class Movement : MonoBehaviour
        if (gameManager.ShowLetter == false)
         {
             rotate();
-            moveForward();
+            if (!bump)
+                moveForward();
+            else
+                moveAgainstWall();
         }
         
         Debug.Log(moveSpeed);
@@ -90,4 +99,42 @@ public class Movement : MonoBehaviour
         exYAngle = yAngle;
         exXAngle = xAngle;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        bump = true;
+
+        // Knockback
+        Vector3 direction = (collision.gameObject.transform.position - transform.position).normalized;
+        Debug.Log("direction" + direction);
+        moveWall = direction * knockbackForce;
+
+        // StartCoroutine(colliding());
+
+        /*while (bump)
+        {
+            transform.Translate(knockback * moveSpeed * Time.deltaTime);
+        }*/
+
+        // rb.AddForce(knockback, ForceMode.Impulse);
+
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        bump = false;
+    }
+
+    IEnumerator colliding()
+    {
+       
+        yield return new WaitForSeconds(0.1f);
+        bump = false;
+    }
+
+    void moveAgainstWall()
+    {
+        // moveWall += Vector3.forward * moveSpeed;
+        transform.Translate(moveWall * Time.deltaTime);
+    }
+
 }
