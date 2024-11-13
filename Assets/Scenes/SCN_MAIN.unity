@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7574,6 +7574,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587938748}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1600812348 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5087925005900555285, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
+  m_PrefabInstance: {fileID: 223974226}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1602237973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8435,6 +8446,14 @@ PrefabInstance:
       propertyPath: LetterUI
       value: 
       objectReference: {fileID: 223974228}
+    - target: {fileID: 5632934485471422617, guid: e237e4a8f1ba46447b2a0548b999bd8f, type: 3}
+      propertyPath: TimerText
+      value: 
+      objectReference: {fileID: 1600812348}
+    - target: {fileID: 6102805404435564173, guid: e237e4a8f1ba46447b2a0548b999bd8f, type: 3}
+      propertyPath: CurrentTime
+      value: 160
+      objectReference: {fileID: 0}
     - target: {fileID: 6224121287090506556, guid: e237e4a8f1ba46447b2a0548b999bd8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.930856
