@@ -17,9 +17,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         timer = GetComponent<Timer>();
         ShowLetter = false;
         LetterUI.SetActive(false);
+
+        GameObject.FindGameObjectWithTag("Music").GetComponent<EndAudio>().PlayMusic();
+
     }
 
     // Update is called once per frame

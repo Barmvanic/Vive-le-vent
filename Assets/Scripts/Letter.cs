@@ -13,10 +13,15 @@ public class Letter : MonoBehaviour
     [SerializeField] Texture2D LetterImage;
     private Material mat;
 
+    // AUDIO
+    AudioSource SFXSource;
+    public AudioClip SFX_Feuille;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        SFXSource = GetComponent<AudioSource>();
+
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         mat = GetComponent<Renderer>().material;
         LetterUImage = LetterUI.GetComponent<RawImage>();
@@ -36,7 +41,11 @@ public class Letter : MonoBehaviour
         Debug.Log("Letter should be reading");
 
         if (col.CompareTag("Player"))
-        {    
+        {
+            // AudioManager.PlaySFX(SFXSource, SFX_Feuille);
+
+            SFXSource.PlayOneShot(SFX_Feuille);
+
             LetterUImage.texture = LetterImage;
             Reading();
             Destroy(this.gameObject);
