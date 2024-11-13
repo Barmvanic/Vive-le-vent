@@ -6,21 +6,29 @@ public class Movement : MonoBehaviour
 {
     GameManager gameManager;
 
+    // MOVE AGAINST WALL
     private bool bump;
     [SerializeField] private float knockbackForce = 10f;
     private Vector3 moveWall;
-    
+
+    // AUDIO
+    private bool firstMove;
+    AudioSource WindSource;
+    public AudioClip SFX_Wind;
+
+    // MOVEMENT
     public bool fast;
     public float fastSpeed = 10f;
     public float moveSpeed = 1f;
     private float StartMoveSpeed;
 
+    // ROTATION
     [SerializeField] private float rotateSpeed = 2f;
     private float xAngle, yAngle;
     private float exXAngle = 0f; 
     private float exYAngle = 0f;
 
-    // Timer
+    // TIMER
     [SerializeField] private float StartTime;
     [SerializeField] private float CurrentTime = 4f;
 
@@ -28,23 +36,38 @@ public class Movement : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        
+        WindSource = GetComponent<AudioSource>();
+
         StartTime = CurrentTime;
         StartMoveSpeed = moveSpeed;
 
         fast = false;
+
+        firstMove = true;
+        WindSource.clip = SFX_Wind;
     }
 
     // Update is called once per frame
     void Update()
     {
-       if (gameManager.ShowLetter == false)
+        if (gameManager.ShowLetter == false)
         {
+            if (firstMove)
+            {
+                AudioManager.PlayWind(WindSource);
+                firstMove = false;
+            }
+
             rotate();
             if (!bump)
                 moveForward();
-            else 
+            else
                 moveAgainstWall();
+        }
+        else
+        {
+            StartCoroutine(AudioManager.StartFade(WindSource, 1f, 0f));
+            firstMove = true;
         }
         
         Debug.Log(moveSpeed);
@@ -120,7 +143,7 @@ public class Movement : MonoBehaviour
 
     void moveAgainstWall()
     {
-        // moveWall += Vector3.forward * moveSpeed;
+        moveWall += (Vector3.forward);
         transform.Translate(moveWall * Time.deltaTime);
     }
 
