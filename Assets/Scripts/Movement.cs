@@ -9,8 +9,7 @@ public class Movement : MonoBehaviour
     private bool bump;
     [SerializeField] private float knockbackForce = 10f;
     private Vector3 moveWall;
-    // private Rigidbody rb;
-
+    
     public bool fast;
     public float fastSpeed = 10f;
     public float moveSpeed = 1f;
@@ -29,8 +28,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        // rb = GetComponent<Rigidbody>();
-
+        
         StartTime = CurrentTime;
         StartMoveSpeed = moveSpeed;
 
@@ -45,7 +43,7 @@ public class Movement : MonoBehaviour
             rotate();
             if (!bump)
                 moveForward();
-            else
+            else 
                 moveAgainstWall();
         }
         
@@ -102,21 +100,16 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        bump = true;
-
-        // Knockback
-        Vector3 direction = (collision.gameObject.transform.position - transform.position).normalized;
-        Debug.Log("direction" + direction);
-        moveWall = direction * knockbackForce;
-
-        // StartCoroutine(colliding());
-
-        /*while (bump)
+        if (collision.gameObject.tag != "Letter")
         {
-            transform.Translate(knockback * moveSpeed * Time.deltaTime);
-        }*/
+            bump = true;
 
-        // rb.AddForce(knockback, ForceMode.Impulse);
+            // Knockback
+            Vector3 direction = (collision.gameObject.transform.position - transform.position).normalized;
+            Debug.Log("direction" + direction);
+            moveWall = direction * knockbackForce;
+        }
+           
 
     }
     private void OnCollisionExit(Collision collision)
@@ -124,12 +117,6 @@ public class Movement : MonoBehaviour
         bump = false;
     }
 
-    IEnumerator colliding()
-    {
-       
-        yield return new WaitForSeconds(0.1f);
-        bump = false;
-    }
 
     void moveAgainstWall()
     {
