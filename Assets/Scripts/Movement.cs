@@ -61,11 +61,12 @@ public class Movement : MonoBehaviour
             }
 
             rotate();
-            
-            if (!bump)
+            moveForward();
+
+            /*if (!bump)
                 moveForward();
             else 
-                moveAgainstWall();
+                moveAgainstWall();*/
 
         }
         else
@@ -151,7 +152,7 @@ public class Movement : MonoBehaviour
     void moveAgainstWall()
     {
         CurrentTime = StartTime;
-        moveSpeed = StartMoveSpeed / 1.5f;
+        moveSpeed = StartMoveSpeed / 1.2f;
         rb.velocity = (transform.forward) * moveSpeed;
     } 
 
