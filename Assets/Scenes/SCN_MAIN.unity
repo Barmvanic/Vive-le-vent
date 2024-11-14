@@ -18676,6 +18676,10 @@ PrefabInstance:
       propertyPath: TimerText
       value: 
       objectReference: {fileID: 1600812348}
+    - target: {fileID: 6102805404435564173, guid: e237e4a8f1ba46447b2a0548b999bd8f, type: 3}
+      propertyPath: CurrentTime
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 6224121287090506556, guid: e237e4a8f1ba46447b2a0548b999bd8f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.930856
@@ -20290,7 +20294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7774252269669432130, guid: 25fe6fb8bf4c76245b01aec630fe1de0, type: 3}
       propertyPath: field of view
-      value: 42
+      value: 51.1
       objectReference: {fileID: 0}
     - target: {fileID: 7774252269669432130, guid: 25fe6fb8bf4c76245b01aec630fe1de0, type: 3}
       propertyPath: far clip plane
