@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     private bool bump;
     [SerializeField] private float knockbackForce = 10f;
     private Vector3 moveWall;
+    private Rigidbody rb;
 
     // AUDIO
     private bool firstMove;
@@ -38,6 +39,7 @@ public class Movement : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         WindSource = GetComponent<AudioSource>();
 
+        rb = GetComponent<Rigidbody>();
         StartTime = CurrentTime;
         StartMoveSpeed = moveSpeed;
 
@@ -59,10 +61,12 @@ public class Movement : MonoBehaviour
             }
 
             rotate();
+            
             if (!bump)
                 moveForward();
-            else
+            else 
                 moveAgainstWall();
+
         }
         else
         {
@@ -90,7 +94,10 @@ public class Movement : MonoBehaviour
 
     void moveForward()
     {
-        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+        // transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+
+        // rb.velocity = Vector3.forward * moveSpeed;
+        rb.velocity = (transform.forward) * moveSpeed;
 
         // Speed increase
         if ((yAngle - exYAngle > 0.01f) && (xAngle - exXAngle > 0.015f))
@@ -128,9 +135,9 @@ public class Movement : MonoBehaviour
             bump = true;
 
             // Knockback
-            Vector3 direction = (collision.gameObject.transform.position - transform.position).normalized;
-            Debug.Log("direction" + direction);
-            moveWall = direction * knockbackForce;
+            // Vector3 direction = (collision.gameObject.transform.position - transform.position).normalized;
+            // Debug.Log("direction" + direction);
+            // moveWall = direction * knockbackForce;
         }
            
 
@@ -143,8 +150,9 @@ public class Movement : MonoBehaviour
 
     void moveAgainstWall()
     {
-        moveWall += (Vector3.forward);
-        transform.Translate(moveWall * Time.deltaTime);
-    }
+        CurrentTime = StartTime;
+        moveSpeed = StartMoveSpeed / 1.5f;
+        rb.velocity = (transform.forward) * moveSpeed;
+    } 
 
 }
