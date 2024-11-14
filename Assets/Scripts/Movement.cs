@@ -54,10 +54,9 @@ public class Movement : MonoBehaviour
     {
         if (gameManager.ShowLetter == false)
         {
-            if (firstMove)
+            if (!WindSource.isPlaying)
             {
                 AudioManager.PlayWind(WindSource);
-                firstMove = false;
             }
 
             rotate();
@@ -72,7 +71,6 @@ public class Movement : MonoBehaviour
         else
         {
             StartCoroutine(AudioManager.StartFade(WindSource, 1f, 0f));
-            firstMove = true;
         }
         
         Debug.Log(moveSpeed);

@@ -7,7 +7,8 @@ public static class AudioManager
     
     public static void PlayWind(AudioSource WindSource)
     {
-        WindSource.volume = 1;
+        
+        WindSource.volume = 1f;
         WindSource.Play();
     }
 
