@@ -7,13 +7,10 @@ public class Movement : MonoBehaviour
     GameManager gameManager;
 
     // MOVE AGAINST WALL
-    private bool bump;
-    [SerializeField] private float knockbackForce = 10f;
     private Vector3 moveWall;
     private Rigidbody rb;
 
     // AUDIO
-    private bool firstMove;
     AudioSource WindSource;
     public AudioClip SFX_Wind;
 
@@ -45,7 +42,6 @@ public class Movement : MonoBehaviour
 
         fast = false;
 
-        firstMove = true;
         WindSource.clip = SFX_Wind;
     }
 
@@ -62,11 +58,7 @@ public class Movement : MonoBehaviour
             rotate();
             moveForward();
 
-            /*if (!bump)
-                moveForward();
-            else 
-                moveAgainstWall();*/
-
+          
         }
         else
         {
@@ -127,25 +119,7 @@ public class Movement : MonoBehaviour
         exXAngle = xAngle;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag != "Letter")
-        {
-            bump = true;
-
-            // Knockback
-            // Vector3 direction = (collision.gameObject.transform.position - transform.position).normalized;
-            // Debug.Log("direction" + direction);
-            // moveWall = direction * knockbackForce;
-        }
-           
-
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        bump = false;
-    }
-
+    
 
     void moveAgainstWall()
     {
