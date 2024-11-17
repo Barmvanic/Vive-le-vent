@@ -229,6 +229,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6142589014294522328}
   - component: {fileID: 1526726854505922596}
+  - component: {fileID: 5008572360984781311}
+  - component: {fileID: 1737959790185881319}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -264,7 +266,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.96576536, b: 0.8207547, a: 1}
   m_Intensity: 0.75
-  m_Range: 34.48
+  m_Range: 72.92389
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -302,7 +304,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -313,3 +315,43 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!320 &5008572360984781311
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039539564101156123}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 0ef3026003568df4aa5a006611b03e29, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 1
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 8211595320777738953, guid: 0ef3026003568df4aa5a006611b03e29, type: 2}
+    value: {fileID: 1737959790185881319}
+  m_ExposedReferences:
+    m_References: []
+--- !u!95 &1737959790185881319
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039539564101156123}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
