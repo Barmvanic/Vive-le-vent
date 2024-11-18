@@ -7638,6 +7638,10 @@ PrefabInstance:
       value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 5087925005900555285, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b509e02bc892d34ebe54779739e467d, type: 2}
+    - target: {fileID: 5087925005900555285, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
       propertyPath: m_fontColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -7650,8 +7654,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5087925005900555285, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2186690814121999558, guid: 0b509e02bc892d34ebe54779739e467d, type: 2}
+    - target: {fileID: 5087925005900555285, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087925005900555285, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6092562099838560667, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
       propertyPath: m_SizeDelta.x
@@ -7673,6 +7685,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -68
       objectReference: {fileID: 0}
+    - target: {fileID: 8332653523093263227, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b509e02bc892d34ebe54779739e467d, type: 2}
+    - target: {fileID: 8332653523093263227, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2186690814121999558, guid: 0b509e02bc892d34ebe54779739e467d, type: 2}
+    - target: {fileID: 8332653523093263227, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8424325885769213621, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
       propertyPath: m_margin.w
       value: -1.5331936
@@ -7685,6 +7709,10 @@ PrefabInstance:
       propertyPath: m_margin.z
       value: -100.50278
       objectReference: {fileID: 0}
+    - target: {fileID: 8424325885769213621, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b509e02bc892d34ebe54779739e467d, type: 2}
     - target: {fileID: 8424325885769213621, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
       propertyPath: m_fontColor.a
       value: 1
@@ -7702,12 +7730,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8424325885769213621, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2186690814121999558, guid: 0b509e02bc892d34ebe54779739e467d, type: 2}
+    - target: {fileID: 8424325885769213621, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190080
       objectReference: {fileID: 0}
     - target: {fileID: 8424325885769213621, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8424325885769213621, guid: 65246d02dd3442d44a210e35cabf20c4, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -76964,7 +77000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7480601738346730622, guid: 29da025a34eaa5d4eabe6fac544b245d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7221
+      value: 7208
       objectReference: {fileID: 0}
     - target: {fileID: 7480601738346730622, guid: 29da025a34eaa5d4eabe6fac544b245d, type: 3}
       propertyPath: m_LocalRotation.w
